@@ -1,11 +1,12 @@
-/* keyPressListener 1.0, 2019-07-19
+/* keyPressListener 1.1, 2019-07-19
  * https://github.com/ryadpasha/keyPressListener
  * Copyright (c) 2019 Ryad Pasha <@RyadPasha>
  * Licensed under the GNU General Public License v3.0 */
  var keyPressListener = {
     configObj: {
         defaultInput: 'key', // Accepts: key, code
-        version: 1.0
+        splitter: '+',
+        version: 1.1
     },
     config: function(configObject) {
         keyPressListener.configObj = Object.assign(keyPressListener.configObj, configObject);
@@ -32,7 +33,7 @@
       if(!window.keys) window.keys = [];
       window.callbacks.push(callback);
       type = (typeof type == 'undefined' ? keyPressListener.configObj.defaultInput : type);
-      var keys = keys.split('+'), x, nddCodes=[];
+      var keys = keys.split(keyPressListener.configObj.splitter), x, nddCodes=[];
       for (x in keys) {
         if(type == 'code') nddCodes[x] = parseInt(keys[x].trim());           // Code
         else nddCodes[x] = keyPressListener.convertToKeyCode(keys[x].trim());// Key
