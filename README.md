@@ -1,7 +1,7 @@
 # keyPressListener
 A wonderful and simple keyboard input capturing utility.
 
-* Tiny (2KB minified and gzipped), no dependency
+* Tiny (1KB minified and gzipped), no dependency
 * Perfect to use in websites that has alot of functions.
 
 Check out [examples](https://github.com/RyadPasha/keyPressListener/blob/master/examples/index.html).
