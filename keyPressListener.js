@@ -7,7 +7,7 @@ var keyPressListener = {
       ignoreOtherInput: false,// If you set (Ctrl+A), and user pressed (Ctrl+A+C) it won't response.
       defaultInput: 'key',   // Accepts: key, code.
       splitter: '+',         // The splitter between each key.
-      version: 1.5
+      version: 1.6
     },
     config: function(configObject) {
         keyPressListener.configObj = Object.assign(keyPressListener.configObj, configObject);
