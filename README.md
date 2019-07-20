@@ -10,9 +10,9 @@ Configuration
 ==========
 The default input type is 'key' (A, B, Ctrl).
 
-If you want to change it to 'code' (95, 41), then change the defaultInput value as follows:
+If you want to change it to 'code' (95, 41), then set `defaultInput` to `code`:
 ```
-keyPressListener.config({'defaultInput':'code'});
+keyPressListener.config({defaultInput: 'code'});
 ```
 
 How to use
@@ -31,6 +31,13 @@ Also, you can define your input buttons with their `Key Codes`:
 keyPressListener.when('90 + 88', function(){
   alert('You pressed Z + X');
 }, 'code'); // <- Note the third parameter here 'code', so it can understand that it's a key code not a char code.
+```
+
+Don't response to other keys:
+==========
+To match only your preferred keys without any other keys, you can set `ignoreOtherInput` to `false`:
+```
+keyPressListener.config({ignoreOtherInput: false});
 ```
 
 ### Contribute
