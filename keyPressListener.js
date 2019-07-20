@@ -4,7 +4,7 @@
  * Licensed under the GNU General Public License v3.0 */
 var keyPressListener = {
     configObj: {
-      ignoreOtherInput: false,// If you set (Ctrl+A), and user pressed (Ctrl+A+C) it won't response.
+      ignoreOtherInput: true,// If false and you set (Ctrl+A), when the user presses (Ctrl+A+C) it won't response.
       defaultInput: 'key',   // Accepts: key, code.
       splitter: '+',         // The splitter between each key.
       version: 1.6
