@@ -4,8 +4,6 @@ A wonderful and simple keyboard input capturing utility.
 * Tiny (1KB minified and gzipped), no dependency
 * Perfect to use in websites that have alot of functions.
 
-Check out [examples](https://github.com/RyadPasha/keyPressListener/blob/master/examples/index.html).
-
 Configuration
 ==========
 The default input type is 'key' (A, B, Ctrl).
