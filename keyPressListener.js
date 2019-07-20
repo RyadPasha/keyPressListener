@@ -31,7 +31,6 @@ var keyPressListener = {
     when: function(keys, callback, type) {
       if(typeof callback != 'function') return alert('Missing callback function.');
       type = (typeof type == 'undefined' || type == '' ? keyPressListener.configObj.defaultInput : type);
-      //if(document.onkeydown) return alert('This version doesn’t support multiple functions.');
       var keys = keys.split(keyPressListener.configObj.splitter), x, nddCodes=[];
       for (x in keys) {
         if(type == 'code') nddCodes[x] = parseInt(keys[x].trim());           // Code
