@@ -53,7 +53,6 @@ var keyPressListener = {
             var entrd=0;for(var k in down){if(down[k])++entrd;}
             var cond = (nddCodes.length == entrd);
           } else var cond = true;
-
           if(found && cond) callback();
           down[evtobj.keyCode] = false;
         })
