@@ -31,7 +31,7 @@ keyPressListener.when('90 + 88', function(){
 }, 'code'); // <- Note the third parameter here 'code', so it can understand that it's a key code not a char code.
 ```
 
-Don't response to other keys:
+Don't response when other keys are pressed
 ==========
 To match only your preferred keys without any other keys, you can set `ignoreOtherInput` to `false`:
 ```
