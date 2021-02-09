@@ -1,6 +1,6 @@
-/* keyPressListener 1.6, 2019-07-19
+/* keyPressListener 1.7, 2021-02-09
  * https://github.com/ryadpasha/keyPressListener
- * Copyright (c) 2019 Ryad Pasha <@RyadPasha>
+ * Copyright (c) 2021 Ryad Pasha <@RyadPasha>
  * Licensed under the GNU General Public License v3.0 */
 var keyPressListener = {
     configObj: {
@@ -21,7 +21,7 @@ var keyPressListener = {
     },
     convertToKeyCode: function(char) {
       var char = char.toUpperCase();
-      key  = ['Alt', 'Ctrl', 'Shift', 'ESC', 'Escape', 'Enter', 'Backspace', 'Cmd'],
+      key  = ['Alt', 'Ctrl', 'Shift', 'ESC', 'Escape', 'Enter', 'Backspace', 'Cmd', 'Enter'],
       code = [18, 17, 16, 27, 27, 13, 8, 91],
       char2= keyPressListener.replaceArray(char, key, code);
       if(char==char2) { // The key is not a letter or a number
@@ -36,12 +36,12 @@ var keyPressListener = {
         if(type == 'code') nddCodes[x] = parseInt(keys[x].trim());           // Code
         else nddCodes[x] = keyPressListener.convertToKeyCode(keys[x].trim());// Key
         var down = {};
-        document.addEventListener('keydown', function(event) {
-          var evtobj = window.event? event : e;
-          down[evtobj.keyCode] = true;
+        document.addEventListener('keydown', function(e) {
+          var e = e || window.event; // to deal with IE
+          down[e.keyCode] = true;
         })
-        document.addEventListener('keyup', function(event) {
-          var evtobj = window.event? event : e;
+        document.addEventListener('keyup', function(e) {
+          var e = e || window.event; // to deal with IE
           var found = false;
           for(var i = 0; i < nddCodes.length; i++) {
             var index = nddCodes[i];
@@ -54,7 +54,7 @@ var keyPressListener = {
             var cond = (nddCodes.length == entrd);
           } else var cond = true;
           if(found && cond) callback();
-          down[evtobj.keyCode] = false;
+          down[e.keyCode] = false;
         })
       }
     }
