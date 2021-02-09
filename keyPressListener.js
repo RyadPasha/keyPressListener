@@ -1,4 +1,4 @@
-/* keyPressListener 1.7, 2021-02-09
+/* keyPressListener 1.8, 2021-02-09
  * https://github.com/ryadpasha/keyPressListener
  * Copyright (c) 2021 Ryad Pasha <@RyadPasha>
  * Licensed under the GNU General Public License v3.0 */
