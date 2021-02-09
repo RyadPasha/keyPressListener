@@ -21,7 +21,7 @@ var keyPressListener = {
     },
     convertToKeyCode: function(char) {
       var char = char.toUpperCase();
-      key  = ['Alt', 'Ctrl', 'Shift', 'ESC', 'Escape', 'Enter', 'Backspace', 'Cmd', 'Enter'],
+      key  = ['Alt', 'Ctrl', 'Shift', 'ESC', 'Escape', 'Enter', 'Backspace', 'Cmd'],
       code = [18, 17, 16, 27, 27, 13, 8, 91],
       char2= keyPressListener.replaceArray(char, key, code);
       if(char==char2) { // The key is not a letter or a number
