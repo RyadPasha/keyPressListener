@@ -6,9 +6,9 @@ A wonderful and simple keyboard input capturing utility.
 
 Configuration
 ==========
-The default input type is 'key' (A, B, Ctrl).
+The default input type is 'key', which accepts keyboard characters (A, B, C, Ctrl, ....etc.).
 
-If you want to change it to 'code' (95, 41), then set `defaultInput` to `code`:
+If you want to change it to 'code' (95, 41, ...etc.), then set `defaultInput` to `code`:
 ```
 keyPressListener.config({defaultInput: 'code'});
 ```
