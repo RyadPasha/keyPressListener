@@ -46,7 +46,7 @@ keyPressListener.config({ignoreOtherInput: false});
 * Create a pull request
 
 ## Discussion
-For any queries contact me at: **me@ryadpasha.com**
+For any queries contact me at: **m@ryad.me**
 
 
 
